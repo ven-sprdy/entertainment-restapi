@@ -10,3 +10,6 @@ okta:
     client-id: ENC(VxEkU7M95zmA+m6duJvmeYz890jJSnUzQ2/b6x3GD1w=)
     client-audience: api://default
     groups-claim: groups
+jasypt:
+  encryptor:
+    password: ${JASYPT_ENCRYPTOR_PASSWORD:}
