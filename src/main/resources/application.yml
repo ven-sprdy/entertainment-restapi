@@ -1,0 +1,12 @@
+server:
+  port: 8081
+spring:
+  data:
+    mongodb:
+      uri: ENC(3FgSYqLpv7kjqfy1PnPCmuK/aaCXVkhRoaV1f+c13YSe7mBthtmj1y/NX/4PDqg+marFn90nvykwUWGH1lanlcZxXr3PUwfFWkVpMIQFqv0xkKPAPZYuPlQREwOwHf26)
+okta:
+  oauth2:
+    issuer: ENC(T/XhKnn9bFxoiJJYTB02gCnMhrhSPTDHDjbEfBDK9m6ncmGip4ks38avqKKHC+jZQYbJUFOV6Qs=)
+    client-id: ENC(VxEkU7M95zmA+m6duJvmeYz890jJSnUzQ2/b6x3GD1w=)
+    client-audience: api://default
+    groups-claim: groups
