@@ -5,8 +5,6 @@ import com.prasaddy.entertainmentapp.service.language.LanguageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,7 +29,7 @@ public class LanguageController {
     private LanguageService languageService;
 
     @GetMapping
-    public @ResponseBody List<LanguageEntity> getLanguages(HttpServletResponse response) {
+    public @ResponseBody List<LanguageEntity> getLanguages() {
         return languageService.getLanguages().stream()
                 .sorted(Comparator.comparing(LanguageEntity::getLanguageName)).collect(Collectors.toList());
     }

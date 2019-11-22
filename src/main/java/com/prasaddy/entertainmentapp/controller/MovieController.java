@@ -3,12 +3,8 @@ package com.prasaddy.entertainmentapp.controller;
 import com.prasaddy.entertainmentapp.io.entity.MovieEntity;
 import com.prasaddy.entertainmentapp.service.movie.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -38,26 +34,32 @@ public class MovieController {
                 .sorted(Comparator.comparing(MovieEntity::getMovieName)).collect(Collectors.toList());
     }
 
-    @GetMapping("/")
-    public @ResponseBody List<MovieEntity> getDistinctMovies() {
-        return movieService.getDistinctMovies();
-    }
-
-    @GetMapping("/images")
-    public @ResponseBody List<String> getImageUrlPaths() {
-        return movieService.getImageUrl();
-    }
-
-    @PostMapping
-    public ResponseEntity<String> postMovies(@RequestBody List<MovieEntity> movieEntities) {
-        movieService.postMovies(movieEntities);
-        return new ResponseEntity<>("Inserted", HttpStatus.OK);
-    }
-
-    @PutMapping("/{movieId}")
-    public ResponseEntity<String> postMovies(@PathVariable String movieId, @RequestBody MovieEntity movieEntitie) {
-        movieService.updateMovie(movieId, movieEntitie);
-        return new ResponseEntity<>("Updated", HttpStatus.OK);
-    }
+//    @GetMapping("/")
+//    public @ResponseBody List<MovieEntity> getDistinctMovies() {
+//        return movieService.getDistinctMovies();
+//    }
+//
+//    @GetMapping("/images")
+//    public @ResponseBody List<String> getImageUrlPaths() {
+//        return movieService.getImageUrl();
+//    }
+//
+//    @PostMapping
+//    public ResponseEntity<String> postMovies(@RequestBody List<MovieEntity> movieEntities) {
+//        movieService.postMovies(movieEntities);
+//        return new ResponseEntity<>("Inserted", HttpStatus.OK);
+//    }
+//
+//    @PutMapping("/{movieId}")
+//    public ResponseEntity<String> postMovies(@PathVariable String movieId, @RequestBody MovieEntity movieEntitie) {
+//        movieService.updateMovie(movieId, movieEntitie);
+//        return new ResponseEntity<>("Updated", HttpStatus.OK);
+//    }
+//
+//    @DeleteMapping("/{movieId}")
+//    public ResponseEntity<String> deleteMovie(@PathVariable String movieId) {
+//        movieService.deleteMovie(movieId);
+//        return new ResponseEntity<>("Deleted", HttpStatus.OK);
+//    }
 
 }

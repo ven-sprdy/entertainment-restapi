@@ -59,4 +59,9 @@ public class MovieService {
         });
         return imagePaths;
     }
+
+    public void deleteMovie(String movieId) {
+        movieRepository.deleteById(movieId);
+    }
+
 }
