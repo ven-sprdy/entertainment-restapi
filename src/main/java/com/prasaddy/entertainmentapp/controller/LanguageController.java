@@ -3,6 +3,7 @@ package com.prasaddy.entertainmentapp.controller;
 import com.prasaddy.entertainmentapp.io.entity.LanguageEntity;
 import com.prasaddy.entertainmentapp.service.language.LanguageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Comparator;
@@ -28,6 +29,7 @@ public class LanguageController {
     @Autowired
     private LanguageService languageService;
 
+    @PreAuthorize("hasAuthority('admin') or hasAuthority('user')")
     @GetMapping
     public @ResponseBody List<LanguageEntity> getLanguages() {
         return languageService.getLanguages().stream()

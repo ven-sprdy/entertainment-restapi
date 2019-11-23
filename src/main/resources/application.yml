@@ -9,7 +9,7 @@ okta:
     issuer: ENC(T/XhKnn9bFxoiJJYTB02gCnMhrhSPTDHDjbEfBDK9m6ncmGip4ks38avqKKHC+jZQYbJUFOV6Qs=)
     client-id: ENC(VxEkU7M95zmA+m6duJvmeYz890jJSnUzQ2/b6x3GD1w=)
     client-audience: api://default
-    groups-claim: groups
+    groupsClaim: groups
 jasypt:
   encryptor:
     password: ${JASYPT_ENCRYPTOR_PASSWORD:}
