@@ -3,7 +3,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: ENC(3FgSYqLpv7kjqfy1PnPCmuK/aaCXVkhRoaV1f+c13YSe7mBthtmj1y/NX/4PDqg+marFn90nvykwUWGH1lanlcZxXr3PUwfFWkVpMIQFqv0xkKPAPZYuPlQREwOwHf26)
+      uri: ENC(ql1Y4Gac/mFIY1I7Ke+5k71perGneFmRLt1owktyeSXrwKOfdavihS+ArYlcm4bgvAU05HkND5Hg3iBAZdpdRzx0/fHrQMm+mm+pMWw1jhhtKB8LSksWEkyw10lHk4iu5t1l72PXN3qZF6TmjBzPxrHWO416V8mggD8Dl1z5wvUFr727Kp3bmNpoQ9DGTuYU)
 okta:
   oauth2:
     issuer: ENC(T/XhKnn9bFxoiJJYTB02gCnMhrhSPTDHDjbEfBDK9m6ncmGip4ks38avqKKHC+jZQYbJUFOV6Qs=)
